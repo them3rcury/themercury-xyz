@@ -1,0 +1,43 @@
+.projectCard {
+  background: rgba(var(--card-background-rgb), 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(var(--border-color-rgb), 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(var(--border-color-rgb), 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.projectCard h3 {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.projectCard p {
+  color: var(--text-secondary);
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.projectLinks a {
+  color: var(--text-primary);
+  background-color: rgba(var(--border-color-rgb), 0.2);
+  border-radius: 99px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.projectLinks a:hover {
+  background-color: var(--accent-primary);
+  color: #fff;
+}

@@ -1,0 +1,5 @@
+.about p {
+  max-width: 70ch;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
