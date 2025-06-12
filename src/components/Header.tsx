@@ -48,7 +48,7 @@ const Header = () => {
                 {displayedText}
                 <span className={styles.cursor}>|</span>
             </h1>
-            <p className={styles.subtitle}>System.out.println("Hello, World!");</p>
+            <p className={styles.subtitle}>System.out.println(&quot;Hello, World!&quot;);</p>
         </header>
     );
 };

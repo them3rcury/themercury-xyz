@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import { projects } from '@/data/projects';
 import ProjectCard from '@/components/ProjectCard';
 import styles from './Projects.module.css';

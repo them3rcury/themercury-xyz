@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import styles from './Links.module.css'
 
 const Links = () => {
