@@ -52,18 +52,60 @@ body::before {
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--text-secondary);
   border-bottom: 1px solid rgba(var(--border-color-rgb), 0.3);
   padding-bottom: 10px;
-  margin-top: 4rem;
+  margin-top: clamp(2rem, 8vw, 4rem);
   margin-bottom: 2rem;
+}
+
+/* Improved focus styles for accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
 }

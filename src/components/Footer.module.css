@@ -1,8 +1,58 @@
 .footer {
   text-align: center;
-  margin-top: 6rem;
-  padding-top: 2rem;
+  margin-top: clamp(3rem, 8vw, 6rem);
+  padding: 2rem 0;
   font-size: 0.9rem;
   color: var(--text-secondary);
   border-top: 1px solid rgba(var(--border-color-rgb), 0.2);
+  background: rgba(var(--card-background-rgb), 0.02);
+  position: relative;
+  
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate-border {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2px;
+  background: conic-gradient(from var(--angle), transparent 25%, var(--accent-primary), transparent 50%);
+  animation: rotate-border 4s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.footer p {
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 0.8rem;
+    padding: 1.5rem 0;
+  }
 }

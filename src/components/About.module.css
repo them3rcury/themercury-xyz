@@ -1,5 +1,39 @@
+.about {
+  margin-bottom: 2rem;
+}
+
 .about p {
   max-width: 70ch;
   color: var(--text-secondary);
   line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skillTag {
+  background: rgba(var(--border-color-rgb), 0.2);
+  border: 1px solid rgba(var(--border-color-rgb), 0.3);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.skillTag:hover {
+  background: rgba(var(--accent-primary), 0.2);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.highlight {
+  color: var(--accent-primary);
+  font-weight: 500;
 }

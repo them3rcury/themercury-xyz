@@ -44,11 +44,13 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <h1 className={styles.mainTitle}>
+            <h1 
+                  className={styles.mainTitle}
+              >
                 {displayedText}
                 <span className={styles.cursor}>|</span>
             </h1>
-            <p className={styles.subtitle}>System.out.println(&quot;Hello, World!&quot;);</p>
+            <p className={styles.subtitle} data-text='System.out.println("Hello, World!");'>System.out.println(&quot;Hello, World!&quot;);</p>
         </header>
     );
 };

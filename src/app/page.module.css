@@ -2,11 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 1rem;
+  padding: clamp(2rem, 8vw, 6rem) 1rem;
   min-height: 100vh;
 }
 
 .container {
   max-width: 900px;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 2rem 1rem;
+  }
 }

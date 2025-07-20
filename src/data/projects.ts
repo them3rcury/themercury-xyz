@@ -8,17 +8,22 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: "Easy Dashboard",
-    description: "As a fun little side project and to use it for myself as well, Easy Dashboard.",
+    description: "A customizable dashboard application built for personal productivity and system monitoring.",
     repoUrl: "https://github.com/them3rcury/easy-dashboard",
   },
   {
+    name: "Easy Finance",
+    description: "A customizable dashboard application built for personal finance and budget management.",
+    repoUrl: "https://github.com/them3rcury/easy-finance",
+  },
+  {
     name: "TheMercury.xyz",
-    description: "The website you are currently on. Built with Next.js",
+    description: "Personal portfolio website showcasing projects and skills..",
     repoUrl: "https://github.com/them3rcury/themercury-xyz",
   },
   {
     name: "PrimaMateria Games",
-    description: "My game company that is coming in the next months.",
+    description: "Upcoming indie game development studio. Currently in development with exciting projects on the horizon.",
     demoUrl: "https://primamateriagames.com/",
   },
 ];
